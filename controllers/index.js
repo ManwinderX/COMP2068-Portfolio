@@ -3,7 +3,9 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Manwinder Singh' });
+  res.render('index', { 
+    title: 'Manwinder Singh' 
+  });
 });
 
 router.get('/about', (req, res) => {
@@ -13,11 +15,15 @@ router.get('/about', (req, res) => {
 })
 
 router.get('/contact', (req, res) => {
-  res.render('contact')
+  res.render('contact', {
+    title: 'Contact'
+  })
 })
 
 router.get('/projects', (req, res) => {
-  res.render('projects')
+  res.render('projects', {
+    title: 'Projects'
+  })
 })
 
 module.exports = router;
